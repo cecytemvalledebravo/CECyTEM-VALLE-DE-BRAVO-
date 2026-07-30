@@ -1,79 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CECyTEM Plantel Valle de Bravo</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+<title>CECyTEM Valle de Bravo</title>
 
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
+<style>
 
-        body{
-            background:#f4f6f9;
-        }
+body{
+    background:#f5f5f5;
+}
 
-        .navbar{
-            box-shadow:0 2px 10px rgba(0,0,0,.2);
-        }
+/* Barra de información */
+.marquesina{
+    background:#198754;
+    color:white;
+    overflow:hidden;
+    white-space:nowrap;
+    height:45px;
+    display:flex;
+    align-items:center;
+    font-weight:bold;
+    font-size:18px;
+}
 
-        /* Barra informativa */
-        .marquesina{
-            background:#0f5132;
-            color:white;
-            overflow:hidden;
-            white-space:nowrap;
-            padding:12px 0;
-            font-weight:bold;
-            font-size:18px;
-        }
+.marquesina span{
+    display:inline-block;
+    padding-left:100%;
+    animation:mover 20s linear infinite;
+}
 
-        .marquesina span{
-            display:inline-block;
-            padding-left:100%;
-            animation:scroll 25s linear infinite;
-        }
+@keyframes mover{
 
-        @keyframes scroll{
-            from{
-                transform:translateX(0);
-            }
-            to{
-                transform:translateX(-100%);
-            }
-        }
+0%{
+transform:translateX(0);
+}
 
-        .hero{
-            background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
-            url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80");
-            background-size:cover;
-            background-position:center;
-            color:white;
-            padding:90px 0;
-            text-align:center;
-        }
+100%{
+transform:translateX(-100%);
+}
 
-        .card{
-            transition:.3s;
-        }
+}
 
-        .card:hover{
-            transform:translateY(-8px);
-            box-shadow:0 10px 20px rgba(0,0,0,.25);
-        }
+.card:hover{
 
-        footer{
-            background:#146c43;
-            color:white;
-        }
+transform:scale(1.03);
+transition:.3s;
 
-    </style>
+}
+
+footer{
+
+background:#146c43;
+color:white;
+
+}
+
+</style>
 
 </head>
+
 <body>
 
 <!-- NAVBAR -->
@@ -82,14 +71,12 @@
 
 <div class="container">
 
-<a class="navbar-brand fw-bold" href="#">
-<i class="bi bi-mortarboard-fill"></i>
+<a class="navbar-brand" href="#">
+<img src="img/logo.png" width="45">
 CECyTEM Valle de Bravo
 </a>
 
-<button class="navbar-toggler"
-data-bs-toggle="collapse"
-data-bs-target="#menu">
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
 
 <span class="navbar-toggler-icon"></span>
 
@@ -99,23 +86,226 @@ data-bs-target="#menu">
 
 <ul class="navbar-nav ms-auto">
 
-   
-
-</div>
 <li class="nav-item">
+
 <a class="nav-link active" href="#">Inicio</a>
+
 </li>
 
 <li class="nav-item dropdown">
 
-<a class="nav-link dropdown-toggle"
-href="#"
-data-bs-toggle="dropdown">
+<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">
 
 Plantel
 
 </a>
 
+<ul class="dropdown-menu">
+
+<li><a class="dropdown-item" href="#">Historia</a></li>
+
+<li><a class="dropdown-item" href="#">Misión</a></li>
+
+<li><a class="dropdown-item" href="#">Visión</a></li>
+
+</ul>
+
+</li>
+
+<li class="nav-item dropdown">
+
+<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+
+Oferta Educativa
+
+</a>
+
+<ul class="dropdown-menu">
+
+<li><a class="dropdown-item">Programación</a></li>
+
+<li><a class="dropdown-item">Mecatrónica</a></li>
+
+<li><a class="dropdown-item">Logística</a></li>
+
+</ul>
+
+</li>
+
+<li class="nav-item">
+
+<a class="nav-link">Noticias</a>
+
+</li>
+
+<li class="nav-item">
+
+<a class="nav-link">Contacto</a>
+
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- BARRA DE INFORMACIÓN -->
+
+<div class="marquesina">
+
+<span>
+
+📢 Bienvenidos al CECyTEM Plantel Valle de Bravo |
+📅 Inscripciones abiertas |
+🎓 Consulta la oferta educativa |
+🏆 Felicidades a nuestros estudiantes destacados |
+🌐 Próximamente nuevo portal escolar
+
+</span>
+
+</div>
+
+<!-- CARRUSEL -->
+
+<div id="slider" class="carousel slide mt-3" data-bs-ride="carousel">
+
+<div class="carousel-inner">
+
+<div class="carousel-item active">
+
+<img src="img/1.jpg" class="d-block w-100" height="450">
+
+</div>
+
+<div class="carousel-item">
+
+<img src="img/2.jpg" class="d-block w-100" height="450">
+
+</div>
+
+<div class="carousel-item">
+
+<img src="img/3.jpg" class="d-block w-100" height="450">
+
+</div>
+
+</div>
+
+<button class="carousel-control-prev" data-bs-target="#slider" data-bs-slide="prev">
+
+<span class="carousel-control-prev-icon"></span>
+
+</button>
+
+<button class="carousel-control-next" data-bs-target="#slider" data-bs-slide="next">
+
+<span class="carousel-control-next-icon"></span>
+
+</button>
+
+</div>
+
+<!-- TARJETAS -->
+
+<div class="container mt-5">
+
+<div class="row">
+
+<div class="col-md-4">
+
+<div class="card shadow">
+
+<div class="card-body text-center">
+
+<h3>Oferta Educativa</h3>
+
+<p>Conoce nuestras carreras técnicas.</p>
+
+<button class="btn btn-success">
+
+Ver más
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card shadow">
+
+<div class="card-body text-center">
+
+<h3>Eventos</h3>
+
+<p>Consulta las actividades del plantel.</p>
+
+<button class="btn btn-success">
+
+Ver más
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card shadow">
+
+<div class="card-body text-center">
+
+<h3>Galería</h3>
+
+<p>Fotografías de nuestras actividades.</p>
+
+<button class="btn btn-success">
+
+Ver más
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer class="mt-5 p-4 text-center">
+
+<h5>
+
+CECyTEM Plantel Valle de Bravo
+
+</h5>
+
+<p>
+
+© 2026 Todos los derechos reservados.
+
+</p>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
 <ul class="dropdown-menu">
 
  <!--<li><a class="dropdown-item" href="#">Historia</a></li> -->
