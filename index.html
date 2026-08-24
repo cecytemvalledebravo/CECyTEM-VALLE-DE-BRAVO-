@@ -349,10 +349,10 @@ Consulta tu Boleta
 </div> </div> </div> </div> </div>
 
 <!-- SECCION DE INFORMACION -->
+<!-- SECCION DE INFORMACION -->
 <div class="container mt-5">
     <div class="row">
 
-        <!-- AVISOS -->
         <div class="col-md-6">
             <div class="card shadow">
                 <div class="card-body">
@@ -375,7 +375,6 @@ Consulta tu Boleta
             </div>
         </div>
 
-        <!-- COMUNIDAD -->
         <div class="col-md-6">
             <div class="card shadow">
                 <div class="card-body text-center">
@@ -389,13 +388,11 @@ Consulta tu Boleta
                         Mantente conectado con nuestra comunidad educativa.
                     </p>
 
-                    <!-- BOTON SEGUIR -->
                     <button id="btnSeguir" class="btn btn-outline-success">
                         <i class="bi bi-person-plus-fill"></i>
                         Seguir página
                     </button>
 
-                    <!-- NUMERO DE SEGUIDORES -->
                     <div class="mt-3">
                         <h4 class="fw-bold text-success mb-0">
                             <span id="seguidores">0</span>
@@ -412,65 +409,6 @@ Consulta tu Boleta
 
     </div>
 </div>
-
-
-<!-- CONTADOR DE SEGUIDORES -->
-<script>
-
-    // Recuperar el número guardado
-    let seguidores = localStorage.getItem("seguidoresCECyTEM");
-
-    if (seguidores === null) {
-        seguidores = 0;
-    } else {
-        seguidores = parseInt(seguidores);
-    }
-
-    // Mostrar número inicial
-    document.getElementById("seguidores").textContent = seguidores;
-
-
-    // Verificar si este usuario ya siguió la página
-    let yaSigue = localStorage.getItem("yaSigueCECyTEM");
-
-    if (yaSigue === "true") {
-
-        document.getElementById("btnSeguir").innerHTML =
-            '<i class="bi bi-check-circle-fill"></i> Siguiendo';
-
-        document.getElementById("btnSeguir").classList.remove("btn-outline-success");
-        document.getElementById("btnSeguir").classList.add("btn-success");
-
-        document.getElementById("btnSeguir").disabled = true;
-    }
-
-
-    // Cuando presiona "Seguir página"
-    document.getElementById("btnSeguir").addEventListener("click", function() {
-
-        // Aumentar seguidores
-        seguidores++;
-
-        // Guardar contador
-        localStorage.setItem("seguidoresCECyTEM", seguidores);
-
-        // Guardar que este usuario ya siguió
-        localStorage.setItem("yaSigueCECyTEM", "true");
-
-        // Mostrar nuevo número
-        document.getElementById("seguidores").textContent = seguidores;
-
-        // Cambiar botón
-        this.innerHTML =
-            '<i class="bi bi-check-circle-fill"></i> Siguiendo';
-
-        this.classList.remove("btn-outline-success");
-        this.classList.add("btn-success");
-
-        // Evitar que vuelva a contar
-        this.disabled = true;
-
-    });
 
 </script>
 <!-- FOOTER ..................................................-->
